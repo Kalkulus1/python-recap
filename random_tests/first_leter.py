@@ -1,3 +1,12 @@
+# Find the first non-repeating character in a string
+
+# Example
+## Input: kubyk
+## Output: u
+
+## Input: kubuyk
+## Output: b
+
 from collections import Counter
 
 def firstLetter(letters):
@@ -15,3 +24,4 @@ def firstLetter(letters):
             break
 
 firstLetter('kubyk')
+firstLetter('kubuyk')
