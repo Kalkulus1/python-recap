@@ -40,6 +40,7 @@ getBrackets('((()))')
 
 total = [0]
 count = [0]
+
 def nestedList(l):
 
     for i in l:
@@ -53,6 +54,7 @@ def nestedList(l):
             nestedList(i)
 
 nestedList([1,2,[3,3,[4],5],4,6,1,1])
+
 print(f'The total is {total[0]}')
 print(f'Average is: {total[0]/count[0]}')
 
