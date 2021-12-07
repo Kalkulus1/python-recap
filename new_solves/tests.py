@@ -27,21 +27,15 @@ def countNumDigitss(number):
 
 def palindrome(string):
     new_string = string.casefold()
-    print(new_string)
     
     reversed_string = new_string[::-1]
     reversed_string = reversed(new_string)
-    print(reversed_string)
     
-    if list(new_string) == list(reversed_string):
-        return True
-    else:
-        return False
+    return list(new_string) == list(reversed_string)
 
 # print(palindrome("aIbohPhoBiA"))
 
 def armstrongNumber(number):
-    
     order = len(str(number))
     total = 0
     
@@ -50,8 +44,7 @@ def armstrongNumber(number):
         digit = temp % 10
         total += digit ** order
         temp //= 10
-        
-        
+      
     if number == total:
         return f"{number} is an Armstrong number"
     else:
@@ -240,7 +233,7 @@ def nestedList(l):
 
     return f'The total is {total[0]}. Average is: {total[0]/count[0]}'
 
-print(nestedList([1,2,[3,3,[4],5],4,6,1,1]))
+# print(nestedList([1,2,[3,3,[4],5],4,6,1,1]))
 
 # Another approach
 def averageNestedList(arr):
@@ -255,7 +248,7 @@ def averageNestedList(arr):
     average = sum(b)/len(b)
     return [c,average]
 
-print(averageNestedList([1,2,[3,3,[4],5],4,6,1,1]))
+# print(averageNestedList([1,2,[3,3,[4],5],4,6,1,1]))
 
 from collections import Counter
 def extractElements(lst, K):
@@ -272,24 +265,41 @@ def extractElements(lst, K):
     alist = []
 
     for i,j in dct.items():
-
         if j > K:
             alist.append(i)
 
     return alist
+
 # print(extractElements([4,6,4,3,3,4,3,4,3,8], 3))
 # print(extractElements([4,6,4,3,3,4,3,4,6,6], 2))
 
 def consOccur(lst):
-    
     result = set()
-    
     for i in range(len(lst) - 2):
-    
         if lst[i] == lst[i+1] and lst[i+1] == lst[i+2]:
-
             result.add(lst[i])
-            
     return result
-
 # print(consOccur([4,4,5,5,5,3,8,22,22,22]))
+
+def pairSum(num1, num2):
+    return num1+num2
+def pairSumSequence(num):
+    result = 0
+    for i in range(num):
+        result += pairSum(i, i+1)
+    return result
+# print(pairSumSequence(3))
+
+def getUniquePairs(aset, k):
+    result = 0
+    ans = []
+    for i in aset:
+        if i+k in aset:
+            result += 1
+            ans.append((i,i+k))
+    return result, ans
+
+print(getUniquePairs({1,7,5,9,2,12,3}, 2))
+
+    
+    

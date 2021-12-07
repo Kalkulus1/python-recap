@@ -35,8 +35,6 @@ def anagram2(s1, s2):
             return False
     
     return True
-            
-    
 
 print(anagram2('dog god', 'god doG'))
 
@@ -63,7 +61,6 @@ def anagramTest(s1, s2):
             count[letter] -= 1
         else:
             count[letter] = 1
-            
     
     for k in count:
         if count[k] != 0:
