@@ -1,40 +1,3 @@
-def countNumDigits(number):
-    
-    if number < 0:
-        number_str = str(number)
-        result = number_str.replace('-', '')
-        return len(result)
-    
-    return len(str(number))
-
-
-# print(countNumDigits(10111))
-
-
-def countNumDigitss(number):
-    
-    count = 0
-    
-    while number != 0:
-        number //= 10
-        
-        count += 1
-        
-    return count
-
-# print(countNumDigitss(10111))
-
-
-def palindrome(string):
-    new_string = string.casefold()
-    
-    reversed_string = new_string[::-1]
-    reversed_string = reversed(new_string)
-    
-    return list(new_string) == list(reversed_string)
-
-# print(palindrome("aIbohPhoBiA"))
-
 def armstrongNumber(number):
     order = len(str(number))
     total = 0
@@ -221,16 +184,12 @@ total = [0]
 count = [0]
 
 def nestedList(l):
-
     for i in l:
-        
         if type(i) == int:
             total[0] += i
             count[0] += 1
-
         else:
             nestedList(i)
-
     return f'The total is {total[0]}. Average is: {total[0]/count[0]}'
 
 # print(nestedList([1,2,[3,3,[4],5],4,6,1,1]))
@@ -279,7 +238,7 @@ def consOccur(lst):
         if lst[i] == lst[i+1] and lst[i+1] == lst[i+2]:
             result.add(lst[i])
     return result
-# print(consOccur([4,4,5,5,5,3,8,22,22,22]))
+print(consOccur([4,4,5,5,5,3,8,22,22,22]))
 
 def pairSum(num1, num2):
     return num1+num2
@@ -289,17 +248,3 @@ def pairSumSequence(num):
         result += pairSum(i, i+1)
     return result
 # print(pairSumSequence(3))
-
-def getUniquePairs(aset, k):
-    result = 0
-    ans = []
-    for i in aset:
-        if i+k in aset:
-            result += 1
-            ans.append((i,i+k))
-    return result, ans
-
-print(getUniquePairs({1,7,5,9,2,12,3}, 2))
-
-    
-    
