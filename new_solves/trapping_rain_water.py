@@ -15,6 +15,7 @@ def solve(A):
     right_max = []
 
     for i in range(len(A)-1, -1, -1):
+        print(i)
         prev_max = max(A[i], prev_max)
         right_max.append(prev_max)
 
@@ -33,4 +34,4 @@ def solve(A):
 
     print(score)
     
-solve([ 3,0,4,2,3])
+solve([3,0,4,2,3])
