@@ -16,4 +16,4 @@ def validate_subsequence(arr1,arr2):
             arr2.pop(0)
     return c == j
 
-print(validate_subsequence([1,2,3,4,5],[2,3,5,5]))
+print(validate_subsequence([1,2,3,-5,3,4,5],[2,3,-5,5]))
