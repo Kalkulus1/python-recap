@@ -27,4 +27,4 @@ def twoNumberSum(array, targetSum):
             numbers[num] = True
     return []
 
-print(twoNumberSum([3, 5, -4,8,11,1,-1,6], 10))
+print(twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10))
