@@ -25,3 +25,19 @@ def firstLetter(letters):
 
 firstLetter('kubyk')
 firstLetter('kubuyk')
+
+def first_letter(s):
+    dct = {}
+
+    for letter in s:
+        if letter in dct:
+            dct[letter] += 1
+        else:
+            dct[letter] = 1
+    
+    for letter in dct:
+        if dct[letter] == 1:
+            print(letter)
+            break
+
+first_letter('kubuyk')

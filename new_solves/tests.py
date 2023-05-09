@@ -248,3 +248,38 @@ def pairSumSequence(num):
         result += pairSum(i, i+1)
     return result
 # print(pairSumSequence(3))
+
+def largest_sum_of_four(numbers):
+    sorted_numbers = sorted(numbers, reverse=True)
+    largest_sum = sum(sorted_numbers[:4])
+    return largest_sum
+print(largest_sum_of_four([4,6,4,3,3,4,3,4,3,8]))
+
+# def most_recurring_char(string):
+#     char_count = {}
+#     for char in string:
+#         if char in char_count:
+#             char_count[char] += 1
+#         else:
+#             char_count[char] = 1
+#     max_count = max(char_count.values())
+#     for char, count in char_count.items():
+#         if count == max_count:
+#             most_recurring_char = char
+#             break
+#     # most_recurring_char = [char for char, count in char_count.items() if count == max_count][0]
+#     return most_recurring_char
+
+
+def most_recurring_char(string):
+    char_count = dict(Counter(string))
+    max_count = max(char_count.values())
+    for char, count in char_count.items():
+        if count == max_count:
+            most_recurring_char = char
+            break
+    # most_recurring_char = [char for char, count in char_count.items() if count == max_count][0]
+    return most_recurring_char
+string = "hello world"
+most_recurring = most_recurring_char(string)
+print(most_recurring)

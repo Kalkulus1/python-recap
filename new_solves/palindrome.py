@@ -14,7 +14,7 @@ x = "aIbohPhoBiA".lower()
 w = ""
 for i in x:
     w = i + w
- 
+
 if (x == w):
     print("Yes")
 else:
@@ -32,7 +32,12 @@ def palindrome(string):
         
     return ''.join(reversed_string) == new_string
 
-# print(palindrome("Ama"))
+def palindrome(string):
+    new_string = string.lower()
+    reversed_string = new_string[::-1]   
+    return reversed_string == new_string
+print(palindrome("Ama"))
+print(palindrome("aIbohPhoBiA"))
 
 def sortList(array):
     

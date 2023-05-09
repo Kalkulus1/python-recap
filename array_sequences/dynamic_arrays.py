@@ -38,8 +38,8 @@ def anagram(s1, s2):
     
     return True
 
-# print(anagram('dog god', 'god doG'))
-# print(anagram2('dog god', 'god doG'))
+print(anagram('dog god', 'god doG'))
+
 
 
 
@@ -52,23 +52,26 @@ def anagramTest(s1, s2):
     
     # Check count for each letter
     count = {}
+    
+    # check letter in count
     for letter in s1:
         if letter in count:
             count[letter] += 1
         else:
             count[letter] = 1
-
-    # Reverse
+    
     for letter in s2:
         if letter in count:
             count[letter] -= 1
         else:
             count[letter] = 1
-    
+
+    print(count)
+
     for k in count:
+        print(f"{k} -- {count[k]}")
         if count[k] != 0:
             return False
-
     return True
     
-print(anagramTest('dog god', 'god dGG'))
+print(anagramTest('dog god', 'god doG'))

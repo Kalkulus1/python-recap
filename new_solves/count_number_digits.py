@@ -23,3 +23,14 @@ def countNumDigitss(number):
     return count
 
 # print(countNumDigitss(10111))
+
+def count_num_digits(num):
+    num_str = str(num)
+
+    if "-" in num_str:
+        num_str = num_str.replace('-', '')
+    
+    return len(num_str)
+
+print(count_num_digits(10111))
+print(count_num_digits(-10111))
