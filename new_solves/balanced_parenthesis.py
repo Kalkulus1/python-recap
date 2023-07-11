@@ -57,7 +57,7 @@ def getBrackets(s):
         print('Not Balanced!')
         
 
-getBrackets(')((())')
+getBrackets('()(())')
 
 
 
@@ -84,5 +84,5 @@ def getParenethesis(string):
     return "Unbalanced"
         
 print(getParenethesis("()"))    
-# string = "((()))"
-# print(string,"-",check(string))
+string = "[((()))][]{}"
+print(string,"-",getParenethesis(string))

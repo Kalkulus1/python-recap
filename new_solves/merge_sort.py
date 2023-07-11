@@ -21,4 +21,5 @@ while j < len(b):
     c.append(b[j])
     j += 1
 
+
 print(c[len(c)//2] if len(c)%2==1 else (c[len(c)//2-1]+c[len(c)//2] // 2))

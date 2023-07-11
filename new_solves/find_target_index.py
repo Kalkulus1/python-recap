@@ -5,7 +5,8 @@ def search(array, target):
     while left <= right:
         
         mid = (left + right) // 2
-        
+        print(mid)
+        print(array[mid])
         if array[mid] == target:
             return mid
         elif target < array[mid]:
@@ -27,7 +28,7 @@ def find_target_index(array, target):
         if array[mid_index] == target:
             return mid_index
         elif target < array[mid_index]:
-            right_index = mid_index -1
+            right_index = mid_index - 1
         else:
             left_index = mid_index + 1
     

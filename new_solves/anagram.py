@@ -69,3 +69,26 @@ def anagramTest(s1, s2):
     
     return True
 print(anagramTest('dog god', 'god doG'))
+
+def anagramTest2(s1, s2):
+    s1 = s1.replace(' ', '').lower()
+    s2 = s2.replace(' ', '').lower()
+    
+    if len(s1) != len(s2):
+        return False
+    
+    count = {}
+
+    for char in s1:
+        count[char] = count.get(char, 0) + 1
+    
+    for char in s2:
+        count[char] = count.get(char, 0) - 1
+    
+    for k in count:
+        if count[k] != 0:
+            return False
+    
+    return True
+
+print(anagramTest2('dog god', 'god doG'))

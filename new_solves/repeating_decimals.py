@@ -7,10 +7,6 @@ def repeatingDecimal(num, den):
     if den == 0:
         return 'NaN'
 
-    # Check if numerator is zero
-    if num == 0:
-        return '0'
-
     # Check if the remainder is zero, just return the answer then
     # Check for divisibility
     if num % den == 0:

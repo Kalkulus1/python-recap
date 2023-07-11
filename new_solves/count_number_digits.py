@@ -22,7 +22,7 @@ def countNumDigitss(number):
         
     return count
 
-# print(countNumDigitss(10111))
+print(countNumDigitss(10111))
 
 def count_num_digits(num):
     num_str = str(num)
